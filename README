@@ -2,6 +2,8 @@
 web2py.snippets is based on web2py version 1.76.3
 =================================================
 
+Original by lvidarte
+
 Requirements:
 	web2py.snippets requires Vim and snipMate plugin
     http://www.vim.org/scripts/script.php?script_id=2540
