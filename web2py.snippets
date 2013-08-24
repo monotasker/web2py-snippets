@@ -785,8 +785,31 @@ snippet #_
 	{{# ${1:comment} }}${2}
 
 # ============================================================================
-# My Additions
+# db related methods
 # ============================================================================
+
+snippet select_
+	db(db.${1:table}.${2:field} == ${3:value}).select()
+
+snippet selectall_
+	db().select(db.${1:table}.ALL)
+
+snippet selectfirst_
+	db(db.${1:table}.${2:field} == ${3:value}).select().first()
 
 snippet find_
 	${1:table}.find(lambda row: ${2:expression})${3}
+
+snippet exclude_
+	${1:table}.find(lambda row: ${2:expression})${3}
+
+snippet exclude_
+	${1:table}.limit(lambda row: ${2:expression})${3}
+
+# ============================================================================
+# Ajax
+# ============================================================================
+
+snippet load_
+	LOAD('${1:controller}', '${2:view}.load', args=[${3:args}], vars={${4:vars}}, 
+		 ajax=${5:True|False}, ajax_trap=${6:True|False})
